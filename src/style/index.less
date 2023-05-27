@@ -1,0 +1,63 @@
+// 清除默认样式
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font: bold 20px "Courier";
+}
+
+#main{
+  width: 360px;
+  height: 420px;
+  background-color: rgb(162, 220, 243);
+  margin: 100px auto;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+
+  #stage{
+    position: relative;
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+    margin: 20px auto;
+
+    #snake{
+      &>div{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(73, 227, 176);
+        border: 1px solid rgb(162, 220, 243);
+      }
+      &>div:first-child{
+        background-color: antiquewhite;
+      }
+    }
+    #food{
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 40px;
+      top: 100px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      &>div{
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        transform: rotate(45deg);
+      }
+        
+    }
+  }
+
+  #score{
+    display: flex;
+    justify-content: space-around;
+  }
+}
